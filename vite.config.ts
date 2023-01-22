@@ -16,7 +16,7 @@ export default defineConfig({
     }),
     Components(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: 'Devify - tools for web developers',
