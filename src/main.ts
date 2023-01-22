@@ -3,7 +3,7 @@ import './style.css'
 import App from './App.vue'
 import { registerSW } from 'virtual:pwa-register'
 
-const intervalMS = 60 * 60 * 1000
+const intervalMS = 5 * 60 * 1000
 
 const updateSW = registerSW({
   onRegisteredSW(swUrl, r) {
@@ -28,7 +28,7 @@ const updateSW = registerSW({
   },
   onNeedRefresh() {
     console.log('检测到更新')
-    const result = window.confirm('是否更新 APP')
+    const result = window.confirm('检测到有更新，是否更新 APP')
     if (result) {
       console.log('正在更新中')
       updateSW()
