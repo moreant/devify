@@ -1,7 +1,8 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-import { resolve } from 'path'
+import { VitePWA } from 'vite-plugin-pwa'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -13,7 +14,8 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'vue-router']
     }),
-    Components()
+    Components(),
+    VitePWA({ registerType: 'autoUpdate' })
   ],
   server: {
     host: true
