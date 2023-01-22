@@ -5,6 +5,8 @@
 
   const count = ref(0)
   count.value = 0
+
+  const reloadSW = '__DATA__'
 </script>
 
 <template>
@@ -13,6 +15,7 @@
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>Use PWA</p>
+    <p>Build at: {{ reloadSW }}</p>
   </div>
 </template>
 

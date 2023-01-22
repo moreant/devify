@@ -1,16 +1,18 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import { registerSW } from 'virtual:pwa-register'
+import { useRegisterSW } from 'virtual:pwa-register/vue'
 
 const intervalMS = 5 * 60 * 1000
 
-const updateSW = registerSW({
+const { updateServiceWorker } = useRegisterSW({
   onRegisteredSW(swUrl, r) {
     console.log(`Service Worker at: ${swUrl}`)
+
     r &&
       setInterval(async () => {
         console.log('Checking for sw update')
+
         if (!(!r.installing && navigator)) return
 
         if ('connection' in navigator && !navigator.onLine) return
@@ -27,11 +29,9 @@ const updateSW = registerSW({
       }, intervalMS)
   },
   onNeedRefresh() {
-    console.log('检测到更新')
     const result = window.confirm('检测到有更新，是否更新 APP')
     if (result) {
-      console.log('正在更新中')
-      updateSW()
+      updateServiceWorker()
     }
   },
   onOfflineReady() {
