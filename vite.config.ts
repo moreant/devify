@@ -7,7 +7,9 @@ import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 
-const replaceOptions = { __DATA__: new Date().toLocaleString('zh-CN') }
+const replaceOptions = {
+  __DATA__: new Date().toLocaleString('zh-CN', { hour12: false, timeZone: 'Asia/Shanghai' })
+}
 
 const pwaOptions: Partial<VitePWAOptions> = {
   registerType: 'prompt',
