@@ -22,7 +22,10 @@ const { updateServiceWorker } = useRegisterSW({
           }
         })
 
-        if (resp?.status === 200) await r.update()
+        if (resp?.status === 200) {
+          alert('fetch update')
+          await r.update()
+        }
       }, intervalMS)
   },
   onNeedRefresh() {
