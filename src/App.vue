@@ -1,11 +1,9 @@
 <script setup lang="ts">
-  import ApplicationGlobal from './components/Application/ApplicationGlobal.vue'
+  import ApplicationRoot from './components/Application/ApplicationRoot.vue'
 </script>
 
 <template>
-  <ApplicationGlobal>
-    <RouterView />
-  </ApplicationGlobal>
+  <ApplicationRoot />
 </template>
 
 <style scoped></style>
