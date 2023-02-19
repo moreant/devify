@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { zhCN, dateZhCN, darkTheme, useOsTheme } from 'naive-ui'
-  import PwaUpdateNotice from '@/components/Pwa/PwaUpdateNotice.vue'
+  import PwaUpdateNotification from '@/components/Pwa/PwaUpdateNotification.vue'
 
   const osThemeRef = useOsTheme()
   const theme = computed(() => (osThemeRef.value === 'dark' ? darkTheme : null))
@@ -12,7 +12,7 @@
       <n-dialog-provider>
         <n-notification-provider>
           <n-message-provider>
-            <PwaUpdateNotice />
+            <PwaUpdateNotification />
             <slot></slot>
           </n-message-provider>
         </n-notification-provider>

@@ -19,5 +19,6 @@ declare module '@vue/runtime-core' {
     NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
     NResult: typeof import('naive-ui')['NResult']
     PwaUpdateNotice: typeof import('./src/components/Pwa/PwaUpdateNotice.vue')['default']
+    PwaUpdateNotification: typeof import('./src/components/Pwa/PwaUpdateNotification.vue')['default']
   }
 }
