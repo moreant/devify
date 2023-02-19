@@ -1,4 +1,5 @@
 import { LoadingBarApi } from 'naive-ui'
+import { App } from 'vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 export const loadingBarApiRef: Ref<LoadingBarApi | null> = ref(null)
@@ -46,4 +47,7 @@ router.afterEach(function (to, from) {
   }
 })
 
-export default router
+export async function setupRouter(app: App) {
+  app.use(router)
+  await router.isReady()
+}

@@ -43,7 +43,7 @@
   })
 
   const showNotification = () => {
-    notification.info({
+    const n = notification.info({
       title: '刷新应用',
       content: '更新已完成，请刷新页面以使用新版本',
       meta: '刷新应用将丢失当前内容，请注意保存',
@@ -55,6 +55,7 @@
             type: 'info',
             onClick: () => {
               updateServiceWorker()
+              n.destroy()
             }
           },
           { default: () => '刷新' }

@@ -1,15 +1,26 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 
-import '@/utils/disabledTouchZoom'
-import router from './routers'
+import { setupAssets } from './plugins'
+import { setupRouter } from './routers'
 
-// https://www.naiveui.com/zh-CN/os-theme/docs/style-conflict
-const meta = document.createElement('meta')
-meta.name = 'naive-ui-style'
-document.head.appendChild(meta)
+async function setupApp() {
+  // import assets: js、css
+  setupAssets()
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+  const app = createApp(App)
+
+  // store plugin: pinia
+  // setupStore(app)
+
+  // vue custom directives
+  // setupDirectives(app)
+
+  // vue router
+  await setupRouter(app)
+
+  // mount app
+  app.mount('#app')
+}
+
+setupApp()

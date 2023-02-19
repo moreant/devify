@@ -38,7 +38,8 @@ const pwaOptions: Partial<VitePWAOptions> = {
   devOptions: {
     enabled: true,
     type: 'module',
-    navigateFallback: 'index.html'
+    navigateFallback: 'index.html',
+    navigateFallbackAllowlist: [/^index.html$/]
   }
 }
 
