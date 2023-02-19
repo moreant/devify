@@ -10,7 +10,7 @@
 <template>
   <div class="center">
     <div style="margin-bottom: 24px; visibility: hidden">Build on: {{ DATE }}</div>
-    <NButton @click="toAbout()"> ABOUT -&gt;</NButton>
+    <NButton type="primary" @click="toAbout()"> ABOUT -&gt;</NButton>
   </div>
 </template>
 
