@@ -22,7 +22,8 @@
     "skipLibCheck": true,
     "noEmit": true,
     "types": [
-      "vite-plugin-pwa/client"
+      "vite-plugin-pwa/client",
+      "naive-ui/volar"
     ]
   },
   "include": [

@@ -6,6 +6,7 @@ import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
 const replaceOptions = {
   __DATA__: new Date().toLocaleString('zh-CN', { hour12: false, timeZone: 'Asia/Shanghai' })
@@ -46,9 +47,15 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue', 'vue-router']
+      imports: [
+        'vue',
+        'vue-router',
+        { 'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar'] }
+      ]
     }),
-    Components(),
+    Components({
+      resolvers: [NaiveUiResolver()]
+    }),
     VitePWA(pwaOptions),
     replace(replaceOptions)
   ],
