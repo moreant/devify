@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>About</div>
+  <PageView>
+    <NH1>About</NH1>
+  </PageView>
 </template>
 
 <style scoped>

@@ -29,6 +29,7 @@ declare module '@vue/runtime-core' {
     NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
     NResult: typeof import('naive-ui')['NResult']
     NSpace: typeof import('naive-ui')['NSpace']
+    NText: typeof import('naive-ui')['NText']
     PageView: typeof import('./src/components/PageView.vue')['default']
     PwaUpdateNotification: typeof import('./src/components/Pwa/PwaUpdateNotification.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
