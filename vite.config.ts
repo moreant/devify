@@ -8,6 +8,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
+import UnoCSS from 'unocss/vite'
+
 const replaceOptions = {
   __DATA__: new Date().toLocaleString('zh-CN', { hour12: false, timeZone: 'Asia/Shanghai' })
 }
@@ -47,6 +49,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
 export default defineConfig({
   plugins: [
     vue(),
+    UnoCSS(),
     AutoImport({
       imports: [
         'vue',
@@ -55,6 +58,7 @@ export default defineConfig({
       ]
     }),
     Components({
+      dirs: ['src/components', 'src/layout'],
       resolvers: [NaiveUiResolver()]
     }),
     VitePWA(pwaOptions),

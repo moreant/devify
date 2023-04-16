@@ -3,7 +3,7 @@ import { EnumThemeAnimateMode } from '@/enum'
 const defaultThemeSetting = {
   page: {
     animate: true,
-    animateMode: 'fade-slide',
+    animateMode: 'fade',
     animateModeList: [
       { value: 'fade-slide', label: EnumThemeAnimateMode['fade-slide'] },
       { value: 'fade', label: EnumThemeAnimateMode.fade },

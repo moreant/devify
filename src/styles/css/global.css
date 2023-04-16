@@ -1,1 +1,6 @@
 @import './transition.css';
+
+body {
+  /* overflow: hidden; */
+  --header-height: 64px;
+}

@@ -1,19 +1,7 @@
-<script setup lang="ts">
-  const router = useRouter()
-  const DATE = '__DATA__'
-
-  const toHome = () => {
-    router.push('/')
-  }
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="center">
-    <div style="margin-bottom: 24px">Build on: {{ DATE }}</div>
-    <div>
-      <NButton @click="toHome"> &lt;- BACK</NButton>
-    </div>
-  </div>
+  <div>About</div>
 </template>
 
 <style scoped>
