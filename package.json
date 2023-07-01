@@ -31,7 +31,7 @@
     "typescript": "^5.0.4",
     "unocss": "^0.53.4",
     "unplugin-auto-import": "^0.15.3",
-    "unplugin-vue-components": "^0.24.1",
+    "unplugin-vue-components": "^0.25.1",
     "vite": "^4.3.5",
     "vite-plugin-pwa": "^0.16.3",
     "vue-eslint-parser": "^9.3.0",
