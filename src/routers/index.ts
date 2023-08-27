@@ -5,8 +5,17 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 export const loadingBarApiRef: Ref<LoadingBarApi | null> = ref(null)
 
 export const toolRoutes: RouteRecordRaw[] = [
-  { path: '/base64', name: 'base64', component: () => import('@/views/Tools/ToollBase64.vue') },
-  { path: '/uuid', name: 'uuid', component: () => import('@/views/Tools/ToolUuid.vue') }
+  { path: '/uuid', name: 'uuid', component: () => import('@/views/Tools/ToolUuid.vue') },
+  {
+    path: '/text/base64',
+    name: 'base64',
+    component: () => import('@/views/Tools/Text/TextBase64.vue')
+  },
+  {
+    path: '/text/radix',
+    name: 'TextRadix',
+    component: () => import('@/views/Tools/Text/TextRadix.vue')
+  }
 ]
 
 const routes: RouteRecordRaw[] = [

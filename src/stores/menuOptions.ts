@@ -38,12 +38,21 @@ export const toolsMenus: MenuGroup[] = [
     label: '基础工具',
     children: [
       {
-        path: '/base64',
+        path: '/uuid',
+        label: 'UUID'
+      }
+    ]
+  },
+  {
+    label: '文本转换',
+    children: [
+      {
+        path: '/text/base64',
         label: 'Base64'
       },
       {
-        path: '/uuid',
-        label: 'UUID'
+        path: '/text/radix',
+        label: '进制转换'
       }
     ]
   }
