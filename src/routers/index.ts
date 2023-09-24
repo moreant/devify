@@ -15,6 +15,11 @@ export const toolRoutes: RouteRecordRaw[] = [
     path: '/text/radix',
     name: 'TextRadix',
     component: () => import('@/views/Tools/Text/TextRadix.vue')
+  },
+  {
+    path: '/hardware/EByte-Zigbee',
+    name: 'EByteZigbee',
+    component: () => import('@/views/Tools/Hardware/EByteZigbee.vue')
   }
 ]
 

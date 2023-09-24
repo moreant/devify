@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const props = defineProps<{ title: string; text: string }>()
+  const props = defineProps<{ title: string; text: string; inputStyle?: string }>()
   const emit = defineEmits(['update:text'])
   const { text } = useVModels(props, emit)
 
@@ -23,7 +23,16 @@
 
     <slot></slot>
 
-    <NInput v-model:value="text" type="textarea" placeholder="" autosize class="my-2 h-xl" />
+    <slot name="input">
+      <NInput
+        v-model:value="text"
+        type="textarea"
+        placeholder=""
+        autosize
+        class="my-2 h-xl"
+        :style="inputStyle"
+      />
+    </slot>
   </NCard>
 </template>
 
