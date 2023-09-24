@@ -55,5 +55,14 @@ export const toolsMenus: MenuGroup[] = [
         label: '进制转换'
       }
     ]
+  },
+  {
+    label:'硬件工具',
+    children:[
+      {
+        path:'/hardware/EByte-Zigbee',
+        label:'EByte-Zigbee'
+      }
+    ]
   }
 ]
