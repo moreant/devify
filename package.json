@@ -31,7 +31,7 @@
     "naive-ui": "^2.34.4",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
-    "unocss": "^0.56.1",
+    "unocss": "^0.56.5",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.9",
