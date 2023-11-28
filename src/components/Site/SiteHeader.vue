@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { toolRoutes } from '@/routers'
   import { renderMenuLabel } from '@/stores/menuOptions'
+  import { useICP } from '@/hooks/useICP'
 
   const route = useRoute()
   const router = useRouter()
@@ -40,11 +41,15 @@
     }
     return null
   })
+
+  const icp = useICP()
 </script>
 
 <template>
   <NLayoutHeader bordered class="nav">
-    <NText tag="div" :depth="1" class="text-2xl cursor-pointer" @click="toHome"> Devify </NText>
+    <NText tag="div" :depth="1" class="text-2xl cursor-pointer" @click="toHome">
+      {{ icp.name }}
+    </NText>
     <div>
       <NMenu
         mode="horizontal"
@@ -53,7 +58,7 @@
         :render-label="renderMenuLabel"
       />
     </div>
-    <div>Github</div>
+    <div></div>
   </NLayoutHeader>
 </template>
 
