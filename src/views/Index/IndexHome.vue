@@ -10,7 +10,7 @@
   <SiteHeader />
   <div class="flex" style="height: calc(100vh - var(--header-height))">
     <div class="flex flex-col w-full items-center justify-center">
-      <NH1>{{ icp.name }}</NH1>
+      <NH1>{{ icp.ICPName }}</NH1>
       <NSpace>
         <NButton @click="router.push('about')">ToAbout</NButton>
         <NButton @click="router.push({ name: 'base64' })">ToTools</NButton>
